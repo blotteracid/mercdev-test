@@ -3,7 +3,7 @@
 }
 
 html, body {
-    height: 100%;
+    min-height: 100%;
 }
 
 body {
@@ -39,6 +39,28 @@ body {
     box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.15);
     background-color: #fff;
     text-align: center;
+}
+
+.form.invalid > .form-error {
+    display: block;
+}
+
+.form.invalid > .form-input {
+    border-color: #ed4159;
+    color: #ed4159;
+}
+
+.form.success > .form-input {
+    display: none;
+}
+
+.form.success > .form-title {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.form.success > .avatar {
+    display: block;
 }
 
 .form-title {
@@ -83,7 +105,6 @@ body {
     outline: none;
 }
 
-.form-button:focus,
 .form-button:hover {
     box-shadow: 0 6px 20px 0 rgba(237, 65, 89, 0.4);
     background-color: #fff;
@@ -99,6 +120,7 @@ body {
 }
 
 .form-error {
+    display: none;
     width: 100%;
     min-height: 40px;
     margin-top: 32px; 
@@ -111,6 +133,8 @@ body {
 }
 
 .avatar {
+    display: none;
+    margin: 0 auto 40px;
     width: 128px;
     height: 128px;
     border-radius: 50%;
@@ -146,5 +170,15 @@ body {
         font-size: 12px;
         margin-top: 24px;
         padding: 14px 16px 12px;
+    }
+
+    .avatar {
+        width: 86px;
+        height: 86px;
+        margin-bottom: 24px;
+    }
+
+    .form.success > .form-title {
+       font-size: 18px; 
     }
 }
