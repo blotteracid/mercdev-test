@@ -1,0 +1,24 @@
+{
+  "name": "mercury-test",
+  "version": "1.0.0",
+  "description": "![screenshot](./example.jpg)",
+  "main": "scripts.js",
+  "scripts": {
+    "beautify": "npm run beautify:css && npm run beautify:js",
+    "beautify:css": "prettier --write './styles/*.css'",
+    "beautify:js": "prettier --write './scripts.js'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blotteracid/mercdev-test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/blotteracid/mercdev-test/issues"
+  },
+  "homepage": "https://github.com/blotteracid/mercdev-test#readme",
+  "devDependencies": {
+    "prettier": "1.18.2"
+  }
+}
