@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
   const form = document.querySelector('#form')
-  const submitButton = document.querySelector('.form-button')
+  const submitButton = document.querySelector('.form__button')
 
   form.addEventListener('submit', function(event) {
     event.preventDefault()
@@ -12,8 +12,8 @@ document.addEventListener('DOMContentLoaded', function() {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        email: document.querySelector(".form-input[name='email']").value,
-        password: document.querySelector(".form-input[name='password']").value,
+        email: document.querySelector(".form__input[name='email']").value,
+        password: document.querySelector(".form__input[name='password']").value,
       }),
     })
       .then(function(res) {
@@ -22,11 +22,11 @@ document.addEventListener('DOMContentLoaded', function() {
       .then(function(result) {
         console.log(result)
         if (result.error) {
-          form.classList.add('invalid')
+          form.classList.add('form_invalid')
         } else {
-          form.classList.remove('invalid')
-          form.classList.add('success')
-          document.querySelector('.form-title').textContent = result.name
+          form.classList.remove('form_invalid')
+          form.classList.add('form_success')
+          document.querySelector('.form__title').textContent = result.name
           document.querySelector('.avatar').src = result.photoUrl
           submitButton.textContent = 'Logout'
         }

@@ -1,0 +1,17 @@
+.avatar {
+  display: none;
+  margin: 0 auto 40px;
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  border: solid 1px #979797;
+  object-fit: cover;
+}
+
+@media (max-width: 414px) {
+  .avatar {
+    width: 86px;
+    height: 86px;
+    margin-bottom: 24px;
+  }
+}

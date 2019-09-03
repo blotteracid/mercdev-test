@@ -5,7 +5,7 @@
   "main": "scripts.js",
   "scripts": {
     "beautify": "npm run beautify:css && npm run beautify:js",
-    "beautify:css": "prettier --write './styles/*.css'",
+    "beautify:css": "prettier --write './styles/**/*.css'",
     "beautify:js": "prettier --write './scripts.js'"
   },
   "repository": {

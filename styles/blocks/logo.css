@@ -1,0 +1,13 @@
+.logo {
+  width: 315px;
+  height: auto;
+  margin-bottom: 125px;
+  object-fit: contain;
+}
+
+@media (max-width: 414px) {
+  .logo {
+    width: 182px;
+    margin-bottom: 36px;
+  }
+}
