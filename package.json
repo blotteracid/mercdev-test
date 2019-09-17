@@ -6,7 +6,8 @@
   "scripts": {
     "beautify": "npm run beautify:css && npm run beautify:js",
     "beautify:css": "prettier --write './styles/**/*.css'",
-    "beautify:js": "prettier --write './scripts.js'"
+    "beautify:js": "prettier --write './scripts.js'",
+    "start": "parcel './index.html'"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,7 @@
   },
   "homepage": "https://github.com/blotteracid/mercdev-test#readme",
   "devDependencies": {
+    "parcel-bundler": "^1.12.3",
     "prettier": "1.18.2"
   }
 }
