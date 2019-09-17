@@ -1,4 +1,9 @@
+import React from "react";
+import ReactDOM from "react-dom";
+
 document.addEventListener('DOMContentLoaded', function() {
+  ReactDOM.render(<h1>hrfre</h1>, document.getElementById("root"));
+
   const form = document.querySelector('#form')
   const submitButton = document.querySelector('.form__button')
 
@@ -53,3 +58,4 @@ document.addEventListener('DOMContentLoaded', function() {
     login(email, password)
   })
 })
+
