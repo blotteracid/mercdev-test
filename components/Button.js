@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Button = props => (
-  <button className="form__button" type={props.type}>
+  <button className="form__button" {...props}>
     {props.children}
   </button>
 )

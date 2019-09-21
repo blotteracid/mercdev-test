@@ -65,7 +65,6 @@
 }
 
 .form__error {
-  display: none;
   width: 100%;
   min-height: 40px;
   margin-top: 32px;
@@ -77,26 +76,14 @@
   font-weight: 500;
 }
 
-.form_invalid > .form__error {
-  display: block;
-}
-
 .form_invalid > .form__input {
   border-color: #ed4159;
   color: #ed4159;
 }
 
-.form_success > .form__input {
-  display: none;
-}
-
 .form_success > .form__title {
   font-size: 28px;
   margin-bottom: 8px;
-}
-
-.form_success > .avatar {
-  display: block;
 }
 
 @media (max-width: 414px) {
