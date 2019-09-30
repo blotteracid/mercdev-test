@@ -1,0 +1,15 @@
+.form {
+  max-width: 600px;
+  width: 100%;
+  padding: 48px 48px 60px;
+  border-radius: 8px;
+  box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.15);
+  background-color: #fff;
+  text-align: center;
+}
+
+@media (max-width: 414px) {
+  .form {
+    padding: 32px 24px 48px;
+  }
+}
