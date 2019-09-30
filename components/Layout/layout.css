@@ -1,4 +1,4 @@
-.container {
+.layout {
   display: flex;
   min-height: 100%;
   width: 100%;
@@ -7,4 +7,14 @@
   justify-content: center;
   align-items: center;
   min-width: 320px;
+}
+
+.layout__logo {
+  margin-bottom: 125px;
+}
+
+@media (max-width: 414px) {
+  .layout__logo {
+    margin-bottom: 36px;
+  }
 }

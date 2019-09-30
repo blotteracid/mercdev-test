@@ -95,6 +95,7 @@ class Form extends Component {
               value={email}
               onChange={this.handleChange}
               placeholder="E-mail"
+              className='form__text_field'
             />
             <TextField
               error={error}
@@ -103,16 +104,17 @@ class Form extends Component {
               value={password}
               onChange={this.handleChange}
               placeholder="Password"
+              className='form__text_field'
             />
           </>
         )}
-        {error && <ErrorMessage text="E-Mail or password is incorrect" />}
+        {error && <ErrorMessage className='form__error_message' text="E-Mail or password is incorrect" />}
         {user.name ? (
-          <Button type="button" onClick={this.handleLogout}>
+          <Button type="button" className='form__button' onClick={this.handleLogout}>
             Logout
           </Button>
         ) : (
-          <Button type="submit">Log In</Button>
+          <Button type="submit" className='form__button'>Log In</Button>
         )}
       </form>
     )

@@ -1,10 +1,11 @@
 import React from 'react'
 import Title from '../Title/Title'
 import Avatar from '../Avatar/Avatar'
+import './user_info.css'
 
 const UserInfo = ({ name, photoUrl }) => (
   <>
-    <Avatar image={photoUrl} />
+    <Avatar className='user_info__avatar' image={photoUrl} />
     <Title text={name} />
   </>
 )

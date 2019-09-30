@@ -1,5 +1,4 @@
 .button {
-  margin-top: 48px;
   width: 146px;
   height: 48px;
   border-radius: 100px;
@@ -26,10 +25,4 @@
   background-color: #fff;
   color: #ed4159;
   transition: all 0.2s;
-}
-
-@media (max-width: 414px) {
-  .button {
-    margin-top: 40px;
-  }
 }

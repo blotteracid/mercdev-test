@@ -1,6 +1,6 @@
 import React from 'react'
 import './avatar.css'
 
-const Avatar = ({ image }) => <img className="avatar" src={image} alt="avatar" />
+const Avatar = ({ className, image }) => <img className={`avatar ${className}`} src={image} alt="avatar" />
 
 export default Avatar

@@ -1,7 +1,7 @@
 .error_message {
   width: 100%;
   min-height: 40px;
-  margin-top: 32px;
+  
   border-radius: 4px;
   background-color: rgba(237, 65, 89, 0.25);
   color: #ed4159;
@@ -13,7 +13,7 @@
 @media (max-width: 414px) {
   .error_message {
     font-size: 12px;
-    margin-top: 24px;
+    
     padding: 14px 16px 12px;
   }
 }

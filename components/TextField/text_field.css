@@ -5,7 +5,6 @@
   border-radius: 4px;
   background-color: #f1f1f1;
   border: solid 1px transparent;
-  margin-top: 32px;
   color: #262626;
   font-size: 16px;
   padding: 0 16px;
@@ -19,10 +18,4 @@
 .text_field.text_field__error {
   border-color: #ed4159;
   color: #ed4159;
-}
-
-@media (max-width: 414px) {
-  .text_field {
-    margin-top: 24px;
-  }
 }
