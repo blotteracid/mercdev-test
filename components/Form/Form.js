@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-import Logo from './Logo'
-import Title from './Title'
-import ErrorMessage from './ErrorMessage'
-import Avatar from './Avatar'
-import TextField from './TextField'
-import Button from './Button'
+import Title from '../Title/Title'
+import UserInfo from '../UserInfo/UserInfo'
+import ErrorMessage from '../ErrorMessage/ErrorMessage'
+import TextField from '../TextField/TextField'
+import Button from '../Button/Button'
+import './form.css'
 
 class Form extends Component {
   constructor(props) {
@@ -82,39 +82,41 @@ class Form extends Component {
     const { email, password, error, user } = this.state
 
     return (
-      <div className="container">
-        <Logo />
-        <form className={`form ${error ? 'form_invalid' : ''} ${user.name ? 'form_success' : ''}`} onSubmit={this.handleSubmit}>
-          {user.photoUrl ? <Avatar image={user.photoUrl} /> : null}
-          <Title text={user.name || 'Log In'} />
-          {user.name ? null : (
-            <>
-              <TextField
-                type="email"
-                name="email"
-                value={email}
-                onChange={this.handleChange}
-                placeholder="E-mail"
-              />
-              <TextField
-                type="password"
-                name="password"
-                value={password}
-                onChange={this.handleChange}
-                placeholder="Password"
-              />
-            </>
-          )}
-          {error ? <ErrorMessage text="E-Mail or password is incorrect" /> : null}
-          {user.name ? (
-            <Button type="button" onClick={this.handleLogout}>
-              Logout
-            </Button>
-          ) : (
-            <Button type="submit">Log In</Button>
-          )}
-        </form>
-      </div>
+      <form className="form" onSubmit={this.handleSubmit}>
+        {user.name ? (
+          <UserInfo name={user.name} photoUrl={user.photoUrl} />
+        ) : (
+          <>
+            <Title text="Log In" />
+            <TextField
+              error={error}
+              type="email"
+              name="email"
+              value={email}
+              onChange={this.handleChange}
+              placeholder="E-mail"
+              className='form__text_field'
+            />
+            <TextField
+              error={error}
+              type="password"
+              name="password"
+              value={password}
+              onChange={this.handleChange}
+              placeholder="Password"
+              className='form__text_field'
+            />
+          </>
+        )}
+        {error && <ErrorMessage className='form__error_message' text="E-Mail or password is incorrect" />}
+        {user.name ? (
+          <Button type="button" className='form__button' onClick={this.handleLogout}>
+            Logout
+          </Button>
+        ) : (
+          <Button type="submit" className='form__button'>Log In</Button>
+        )}
+      </form>
     )
   }
 }
